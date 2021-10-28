@@ -4,20 +4,19 @@ Created on Wed Dec 16 18:55:56 2020
 Password Encrypter by Paul
 @author: Paul
 """
-print ('Dies ist ein Passwort-Verschlüsseler, der ihr Passwort verschlüssen wird,')
-print ('und es anschließend verschlüsselt wieder ausgibt.')
-print ('Sie können jedes beliebige Passwort und auch andere Phrasen eingeben.')
+print ('This is a basic Password-Encrypter,which takes your password,')
+print ('and shows it encrypted.')
+print ('You can type in every password and also other phrases.')
 print ()
-print ('Anmerkung: Dies ist keine gute Verschlüsselung, und wurde nur zu Lernzwecken entwickelt.')
-VarMulti= 1 #Variabler Multiplikator, mit der die einzelnen Zeichen multipliziert werden
+print ('Note: This is not a good encryption, its for educational purposes only and a proof of concept.')
+VarMulti= 1 #variable multiplier
 numbers =[]
 Hash=0
-for x in input('Bitte geben sie ihr Passwort ein: '):
-    number= ord (x) #Alle Zeichen des Passworts werden in Zahlenwerte umgewandelt
-    number = number * 14 * 567 +25 * VarMulti #Diese Zahlenwerte werden mit Bestimmten Werten multipliziert
-    VarMulti= VarMulti +1 #Der Variable Multiplikator wird um 1 ergänzt, um einen gleichen verschlüsselten Wert bei gleichen Zeichen zu vermeiden
-    Hash = Hash + number #Die verschlüsselten Werte der einzelnen Zeichen werden zu einem endgültigen Wert addiert 
-print(Hash) #Der endgültig verschlüsselte Wert ("Hash") wird ausgegeben. 
-print('Es kann vorkommen, dass zwei Passwörter den selben "Hash" haben,')
-print('aber dazu bedarf es sehr viel Glück ;)')
-wait= input('Drücken sie Enter, um das Programm zu schließen.')
+for x in input('Please type in your password: '):
+    number= ord (x) #All charakters of the entered Phrase are converted to Numbers
+    number = number * 14 * 567 +25 * VarMulti #These Numbers are multiplied with some fixed Values
+    VarMulti= VarMulti +1 #1 is added to the variable multiplier ,to prevent the "hash" being the same with same charakters
+    Hash = Hash + number #The encrypted charakters are added to a cumulative value
+print(Hash) #The final encrypted value ("Hash") is being displayed
+print('It can be possible that to passwords have the same "Hash"')
+wait= input('Press Enter to close the Program')
